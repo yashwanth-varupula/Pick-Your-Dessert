@@ -1,0 +1,111 @@
+html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fdebd7;
+      color: #3e2723;
+      font-family: 'popins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Show only menu by default */
+    section {
+      display: none;
+    }
+
+    /* Show section when targeted */
+    section:target {
+      display: block;
+    }
+
+    /* Hide menu when a section is targeted */
+    body:has(section:target) header {
+      display: none;
+    }
+
+    /* Header grid styling */
+    .header {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+      row-gap: 30px;
+      border: 2px solid #ff6f99;
+      border-radius: 20px;
+      padding: 10px 0px;
+      background-color: #ff6f99;
+    }
+
+    .img {
+      text-align: center;
+    }
+
+    .header img {
+      border: 2px solid #ff6f99;
+      border-radius: 20px;
+      padding: 0px;
+   
+    }
+
+    .content-section {
+      border: 2px solid #ff6f99;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 90px;
+      background-color: #ff6f99;
+    }
+
+    .sidebyside {
+      display: flex;
+      padding-left: 200px;
+     
+    }
+h3{
+
+  padding-left: 225px;
+}
+    p {
+      color: #fdebd7;
+      font-size: larger;
+    }
+
+    ul {
+      color: #fdebd7;
+    }
+
+   .back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ff6f99, #ff4081);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(255, 105, 135, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000; /* stays above all content */
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #ff4081, #ff6f99);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 105, 135, 0.4);
+}
+
+.back-button:active {
+  transform: scale(0.97);
+}
+
+.back-button::before {
+  content: "⬅";
+  font-size: 18px;
+}
